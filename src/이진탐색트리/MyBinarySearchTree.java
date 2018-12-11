@@ -56,14 +56,15 @@ public class MyBinarySearchTree {
 // (3) p를 루트로 하는 트리를 중위 순회하며 키값을 출력하는 메소드(재귀 알고리즘)
 	private void inorder(Node p) {
 		if (p != null) {
+			
 			inorder(p.leftChild);
-			System.out.print(p.key + " ");
 			inorder(p.rightChild);
+			System.out.print(p.key + " ");
 		}
 
 	}
 
-	// (4) 트리의 최대 키값을 리턴하는 메소드(반복 알고리즘) - 공백 트리인 경우 NoSuchElementException 예외 발생
+//	 (4) 트리의 최대 키값을 리턴하는 메소드(반복 알고리즘) - 공백 트리인 경우 NoSuchElementException 예외 발생
 	public int max() {
 		if (root == null) {
 			throw new NoSuchElementException();
@@ -79,6 +80,8 @@ public class MyBinarySearchTree {
 
 	}
 
+
+	
 	// 트리가 키값 key를 포함하는지 여부를 리턴하는 메소드
 	public boolean contains(int key) {
 		return search(root, key);
