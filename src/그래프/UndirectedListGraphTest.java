@@ -50,11 +50,6 @@ class UndirectedListGraph {
 			// list[v1] 이 가르키는 단순연결리스트의 맨 앞에 v2 삽입
 			// list[v2] 이 가르키는 단순 연결리스트의 맨 앞에 v1 삽입
 			
-			if (list[v1] == null && list[v2] == null) {
-				list[v1] = t;
-				list[v2] = t2;
-			} 
-			else if ( list[v1] != null){ // list[v1] !=null
 				t.link = list[v1];
 				list[v1] = t;
 
@@ -63,7 +58,6 @@ class UndirectedListGraph {
 			}
 		}
 
-	}
 
 	public void printAdjacentVertices(int v) {
 
