@@ -2,11 +2,12 @@ package 퀵정렬;
 /* 내용 : 재귀를 이용한 퀵정렬(Quick Sort) */
 
 public class QuickSort {
+
 	public static int partition(int arr[], int left, int right) {
 
 		int pivot = arr[(left + right) / 2];
 
-		while (left < right) {
+		while (left < right) { // left(시작점) 과 right(끝) 이  엇갈릴 때 까지 while반복.
 			while ((arr[left] < pivot) && (left < right))
 				left++;
 			while ((arr[right] > pivot) && (left < right))
